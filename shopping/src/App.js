@@ -1,8 +1,15 @@
-import './App.css';
-import Footer from './components/Footer';
+
+import "./App.css";
+
+
+import Footer from "./components/Footer";
+import Main from "./pages/Main";
+
 import Nav from './components/Nav';
-import {Routes, Route} from 'react-router-dom';
-import Main from './pages/Main';
+
+
+
+
 
 function App() {
     return (
@@ -11,6 +18,7 @@ function App() {
             <Main />
             <Footer />
         </div>
+        
     );
 }
 

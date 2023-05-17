@@ -8,6 +8,7 @@ footer {
   font-size: 12px;
   line-height: 88.02%;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: white;
 }
 
 .Nav{
@@ -23,6 +24,7 @@ footer {
   height: 100%;
   display: flex;
   align-items: center;
+
 }
 
 .title-logo{
@@ -80,4 +82,25 @@ footer {
 }
 .modal-list:hover{
   background-color: #f6e4f4;
+}
+
+
+
+
+
+/* main */
+.Main{
+  width: 100%;
+  height: calc(100vh - 130px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container{
+  width: 80%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
