@@ -1,31 +1,31 @@
-import BookmarkList from './BookmarkList';
+    import React, { useEffect, useState } from "react";
+    import ProductList from "./ProductList";
 
+    const Main = () => {
+    const [productItems, setProductItems] = useState([]);
 
-
-import ProductList from './ProductList';
-import NavModal from '../components/NavModal';
-
-const Main = ({modal, setIsOpen}) => {
-
-return(
-    <div className='Main' onClick={()=>{ setIsOpen(false)}}>
-    <div className='main-container'>
-        <div>
-            <h2>상품리스트</h2>
-            <ProductList/>
-        </div>
-
-        <div>
-            <h2>북마크리스트</h2>
-            <BookmarkList />
-        </div>
-    </div>
-
-        {
-            modal && <NavModal />
+    useEffect(() => {
+        const fetchData = async () => {
+        try {
+            const response = await fetch(
+            "http://cozshopping.codestates-seb.link/api/v1/products?count=4"
+            );
+            const data = await response.json();
+            setProductItems(data);
+        } catch (error) {
+            console.error("Error fetching data:", error);
         }
-    </div>
-    )
-}
+        };
 
-export default Main;
+        fetchData();
+    }, []);
+
+    return (
+        <div>
+        <h2>상품리스트</h2>
+        <ProductList productItems={productItems} />
+        </div>
+    );
+    };
+
+    export default Main;
