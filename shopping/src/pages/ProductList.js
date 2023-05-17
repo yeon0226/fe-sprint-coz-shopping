@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
 
-function ProductList() {
+const ProductList = ({ productItems }) => {
   return (
-    <div>ProductList</div>
-  )
-}
+    <div>
+      {productItems.map((product) => (
+        <div key={product.id}>
+          <h3>{product.title}</h3>
+          <p>Price: {product.price}</p>
+          <img src={product.image_url} alt={product.title} />
+        </div>
+      ))}
+    </div>
+  );
+};
 
-export default ProductList
+export default ProductList;
