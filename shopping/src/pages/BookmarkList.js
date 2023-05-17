@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
+import BookmarkCard from '../components/BookmarkCard';
 
-function BookmarkList() {
+const BookmarkList = ({ bookmarkItems }) => {
   return (
     <div>
-        bookmark
+      {bookmarkItems.map((bookmark) => (
+        <BookmarkCard key={bookmark.id} bookmark={bookmark} />
+      ))}
     </div>
-  )
+  );
 }
 
-export default BookmarkList
+export default BookmarkList;
