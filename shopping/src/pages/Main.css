@@ -1,0 +1,21 @@
+    /* main product list*/
+.warp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content {
+    width: 1128px;
+    height: 640px;
+
+    display: flex;
+    flex-direction: column;
+}
+.product-list{
+    height: 320px;
+}
+.product-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
